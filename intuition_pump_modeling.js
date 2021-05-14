@@ -66,7 +66,7 @@ const attendConference = (philosopher, reliabilityOfIntuitions, bonusReliability
 
 const askExpert = (philosopher, reliabilityOfIntuitions, bonusReliability) => {
   const upgradedReliability = reliabilityOfIntuitions + bonusReliability;
-  Math.random() < 0.7 ? philosopher.update(true, upgradedReliability) : philosopher.update(false, upgradedReliability);
+  Math.random() < upgradedReliability ? philosopher.update(true, upgradedReliability) : philosopher.update(false, upgradedReliability);
 }
 
 const generateInitialScenarios = (sizeOfPopulation, numberOfTrials) => {
